@@ -1,7 +1,3 @@
-Here's a **README** file for your GitHub repository explaining the STM32 F407 MicroPython LED blinking project.  
-
----
-
 # **STM32 F407 LED Blinking using MicroPython**  
 
 ## **Overview**  
@@ -93,7 +89,7 @@ while True:
 2. Enter `>>>` to access the MicroPython REPL.  
 3. Type:  
    ```python
-   exec(open("led_blink.py").read())
+   exec(open("led_blink.py").read()) (or) click the right click of the mouse
    ```
    This will execute the script and blink the **onboard LEDs** in sequence.
 
