@@ -24,11 +24,14 @@ This project demonstrates how to set up **MicroPython** on an **STM32 F407** mic
 ---
 
 ### **Step 2: Flash MicroPython to STM32F407**  
-1. Open **STM32CubeProgrammer** and connect the STM32 board.  
-2. Select the correct **ST-Link Interface**.  
-3. Click **"Open File"**, browse for the downloaded **MicroPython .hex file**, and select it.  
-4. Click **"Download"** to flash MicroPython to the STM32 board.  
-5. Once the process completes, restart the board.  
+
+1. Visit the official [STM32CubeProgrammer Website](https://www.st.com/en/development-tools/stm32cubeprog.html)
+2. Download the Software according to you System Requirements (Windows/Linux/Mac)
+3. Open **STM32CubeProgrammer** and connect the STM32 board.  
+4. Select the correct **ST-Link Interface**.  
+5. Click **"Open File"**, browse for the downloaded **MicroPython .hex file**, and select it.  
+6. Click **"Download"** to flash MicroPython to the STM32 board.  
+7. Once the process completes, restart the board.  
 
 ---
 
