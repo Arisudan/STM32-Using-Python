@@ -18,7 +18,7 @@ This project demonstrates how to set up **MicroPython** on an **STM32 F407** mic
 ## **Step-by-Step Instructions**  
 
 ### **Step 1: Download MicroPython for STM32**  
-1. Visit the official [MicroPython website](https://micropython.org/download/stm32/)  
+1. Visit the official [MicroPython website](https://micropython.org/download/STM32F4DISC/)
 2. Download the **latest stable MicroPython firmware** for STM32F407 (usually in **.hex format**).  
 
 ---
