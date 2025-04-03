@@ -45,7 +45,7 @@ This project demonstrates how to set up **MicroPython** on an **STM32 F407** mic
 ---
 
 ### **Step 4: LED Blinking with MicroPython**  
-Save the following script as `led_blink1.py` and run it on the STM32 board.  
+Save the following script as `led_blink.py` and run it on the STM32 board.  
 
 ```python
 import pyb
@@ -184,7 +184,7 @@ This project demonstrates how to set up **MicroPython** on an **STM32 F411RE** m
 
 Since the **STM32F411RE** board has only **one onboard LED**, we will use **LED1**, which is connected to **pin PA5**.  
 
-Save the following script as `led_blink.py` and run it on the STM32 board.  
+Save the following script as `led_blink1.py` and run it on the STM32 board.  
 
 ```python
 import machine
