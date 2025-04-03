@@ -249,3 +249,6 @@ while True:
 This project successfully sets up **MicroPython** on **STM32F411RE** and demonstrates a **basic LED blinking program** using Python. With MicroPython, STM32 boards can be programmed **quickly and easily** without needing traditional **C-based** firmware development.  
 
 ---
+---
+### Author: [ARISUDAN TH]
+GitHub: [https://github.com/Arisudan]
