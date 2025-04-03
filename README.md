@@ -125,3 +125,127 @@ while True:
 This project **successfully sets up MicroPython** on STM32F407 and demonstrates a basic **LED blinking program** using **Python**. With MicroPython, STM32 boards can be programmed **quickly and easily** without needing traditional C-based firmware development.  
 
 ---
+
+# **STM32 F411RE LED Blinking using MicroPython**  
+
+## **Overview**  
+This project demonstrates how to set up **MicroPython** on an **STM32 F411RE** microcontroller and execute a basic **LED blinking program** using Python. The tutorial includes steps to **flash MicroPython**, **set up serial communication**, and **run the code**.  
+
+---
+
+## **Hardware Requirements**  
+
+- **STM32F411RE Nucleo Board**  
+- **ST-Link V2 (if required for flashing)**  
+- **Micro-USB cable** for power and communication  
+
+---
+
+## **Software Requirements**  
+
+- **STM32CubeProgrammer** (for flashing the MicroPython firmware)  
+- **MicroPython firmware (.hex file) for STM32**  
+- **Tera Term** (for serial communication)  
+
+---
+
+## **Step-by-Step Instructions**  
+
+### **Step 1: Download MicroPython for STM32**  
+
+- Visit the official [MicroPython website](https://micropython.org/download/NUCLEO_F411RE/)  
+- Download the **latest stable MicroPython firmware** for **STM32F411RE** (usually in **.hex format**).  
+
+---
+
+### **Step 2: Flash MicroPython to STM32F411RE**  
+
+- Visit the official [STM32CubeProgrammer Website](https://www.st.com/en/development-tools/stm32cubeprog.html)  
+- Download the software according to your **system requirements** (Windows/Linux/Mac).  
+- Open **STM32CubeProgrammer** and connect the STM32 board.  
+- Select the correct **ST-Link Interface**.  
+- Click **"Open File"**, browse for the downloaded **MicroPython .hex file**, and select it.  
+- Click **"Download"** to flash MicroPython to the STM32 board.  
+- Once the process completes, restart the board.  
+
+---
+
+### **Step 3: Open Serial Communication**  
+
+- Install **Tera Term** (if not installed already).  
+- Open **Tera Term** and select the correct **COM port**.  
+- Set the **Baud rate** to **115200**.  
+- Click **"OK"** to establish a connection.  
+- Press **Enter**, and you should see a `>>>` MicroPython REPL prompt.  
+
+---
+
+### **Step 4: LED Blinking with MicroPython**  
+
+Since the **STM32F411RE** board has only **one onboard LED**, we will use **LED1**, which is connected to **pin PA5**.  
+
+Save the following script as `led_blink.py` and run it on the STM32 board.  
+
+```python
+import machine
+import time
+
+led = machine.Pin("PA5", machine.Pin.OUT)  # Define PA5 as an output pin
+
+while True:
+    led.on()   # Turn LED on
+    time.sleep(1)  # Wait for 1 second
+    led.off()  # Turn LED off
+    time.sleep(1)  # Wait for 1 second
+```
+
+---
+
+### **Step 5: Running the Script**  
+
+- Open **Tera Term** and connect to the STM32 board.  
+- Enter `>>>` to access the **MicroPython REPL**.  
+- Type:  
+
+  ```python
+  exec(open("led_blink1.py").read())  
+  ```  
+
+  (or) **right-click** and select **"Paste"**, then press **Enter**.  
+
+  This will execute the script and blink the **onboard LED** in a loop.  
+
+---
+
+## **Expected Output**  
+
+- The **onboard LED (PA5)** will **blink ON and OFF every 1 second**.  
+- The loop runs **indefinitely** until manually stopped.  
+
+---
+
+## **Troubleshooting**  
+
+### **1. No Output in Tera Term**  
+
+- Ensure STM32 is **properly connected**.  
+- Restart the board and reattempt connection.  
+- Select the correct **Baud Rate: 115200**.  
+
+### **2. MicroPython Not Responding**  
+
+- Try pressing **Reset Button** on STM32.  
+- Use `CTRL + D` to soft reboot MicroPython.  
+
+### **3. Flashing Issues**  
+
+- Use **STM32CubeProgrammer** to verify the **MicroPython firmware** is correctly written.  
+- If flashing fails, check the **ST-Link connection** and retry.  
+
+---
+
+## **Conclusion**  
+
+This project successfully sets up **MicroPython** on **STM32F411RE** and demonstrates a **basic LED blinking program** using Python. With MicroPython, STM32 boards can be programmed **quickly and easily** without needing traditional **C-based** firmware development.  
+
+---
